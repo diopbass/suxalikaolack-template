@@ -22,64 +22,77 @@ export default function AjouterProgrammePage() {
   }
 
   return (
-    <div className="flex min-h-screen bg-background-light dark:bg-background-dark">
-      {/* Sidebar */}
-      <aside className="w-64 flex-col border-r border-[#f4e6e6] dark:border-[#3d2a2a] bg-white dark:bg-[#1a0a0a] hidden lg:flex">
-        <div className="flex flex-col gap-4 p-6">
-          <div className="flex flex-col mb-4">
-            <h1 className="text-[#1d0c0c] dark:text-[#f8f5f5] text-base font-bold">Administration</h1>
-            <p className="text-[#a14545] text-xs font-normal">SUXALI KAOLACK</p>
+    <div className="flex h-screen overflow-hidden" style={{ fontFamily: 'Public Sans, sans-serif' }}>
+      {/* SIDEBAR */}
+      <aside className="w-72 bg-white dark:bg-[#230f0f] border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0 hidden lg:flex">
+        <div className="p-6 flex items-center gap-3">
+          <div className="size-10 bg-[#f90606] rounded-lg flex items-center justify-center text-white">
+            <span className="material-symbols-outlined text-2xl">star</span>
           </div>
-          <nav className="flex flex-col gap-1">
-            <Link
-              href="/admin/dashboard"
-              className="flex items-center gap-3 px-3 py-2 text-[#a14545] hover:bg-primary/5 rounded-lg transition-colors"
-            >
-              <span className="material-symbols-outlined">dashboard</span>
-              <p className="text-sm font-medium">Tableau de bord</p>
-            </Link>
-            <Link
-              href="/admin/dashboard/opportunites"
-              className="flex items-center gap-3 px-3 py-2 text-[#a14545] hover:bg-primary/5 rounded-lg transition-colors"
-            >
-              <span className="material-symbols-outlined">business_center</span>
-              <p className="text-sm font-medium">Opportunités</p>
-            </Link>
-            <Link
-              href="/admin/dashboard/membres"
-              className="flex items-center gap-3 px-3 py-2 text-[#a14545] hover:bg-primary/5 rounded-lg transition-colors"
-            >
-              <span className="material-symbols-outlined">group</span>
-              <p className="text-sm font-medium">Membres</p>
-            </Link>
-            <Link
-              href="/admin/dashboard/programmes"
-              className="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary"
-            >
-              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>account_tree</span>
-              <p className="text-sm font-bold">Programmes</p>
-            </Link>
-            <Link
-              href="/admin/dashboard/agenda"
-              className="flex items-center gap-3 px-3 py-2 text-[#a14545] hover:bg-primary/5 rounded-lg transition-colors"
-            >
-              <span className="material-symbols-outlined">event</span>
-              <p className="text-sm font-medium">Événements</p>
-            </Link>
-            <div className="my-4 border-t border-[#f4e6e6] dark:border-[#3d2a2a]"></div>
-            <Link
-              href="/admin/dashboard/parametres"
-              className="flex items-center gap-3 px-3 py-2 text-[#a14545] hover:bg-primary/5 rounded-lg transition-colors"
-            >
-              <span className="material-symbols-outlined">settings</span>
-              <p className="text-sm font-medium">Paramètres</p>
-            </Link>
-          </nav>
+          <div>
+            <h1 className="text-[#f90606] font-bold text-lg leading-tight uppercase">Suxali Kaolack</h1>
+            <p className="text-xs text-slate-500 font-medium">Administration</p>
+          </div>
+        </div>
+        
+        <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+          <Link href="/admin/dashboard" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">dashboard</span>
+            <span className="text-sm font-medium">Tableau de bord</span>
+          </Link>
+          <Link href="/admin/dashboard/news" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">newspaper</span>
+            <span className="text-sm font-medium">Actualités</span>
+          </Link>
+          <Link href="/admin/dashboard/agenda" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">calendar_month</span>
+            <span className="text-sm font-medium">Agenda</span>
+          </Link>
+          <Link href="/admin/dashboard/programmes" className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#f90606]/10 border-l-4 border-[#f90606] text-[#f90606]">
+            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>assignment</span>
+            <span className="text-sm font-semibold">Programmes</span>
+          </Link>
+          <Link href="/admin/dashboard/opportunites" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">lightbulb</span>
+            <span className="text-sm font-medium">Opportunités</span>
+          </Link>
+          <Link href="/admin/dashboard/partners" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">handshake</span>
+            <span className="text-sm font-medium">Partenaires</span>
+          </Link>
+          <Link href="/admin/dashboard/donations" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">volunteer_activism</span>
+            <span className="text-sm font-medium">Dons</span>
+          </Link>
+          <Link href="/admin/dashboard/users" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">group</span>
+            <span className="text-sm font-medium">Utilisateurs</span>
+          </Link>
+          <Link href="/admin/dashboard/suggestions" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined">chat</span>
+                <span className="text-sm font-medium">Suggestions</span>
+              </div>
+              <span className="bg-[#f90606] text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">12</span>
+            </div>
+          </Link>
+          <Link href="/admin/dashboard/settings" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">settings</span>
+            <span className="text-sm font-medium">Paramètres</span>
+          </Link>
+        </nav>
+        
+        <div className="p-4 mt-auto border-t border-slate-200 dark:border-slate-800">
+          <button className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-[#f90606] text-white rounded-lg font-bold text-sm hover:bg-red-700 transition-all shadow-sm">
+            <span className="material-symbols-outlined text-sm">logout</span>
+            Déconnexion
+          </button>
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main className="flex-1 overflow-y-auto">
+      {/* MAIN CONTENT */}
+      <main className="flex-1 flex flex-col min-w-0 bg-[#f8f5f5] dark:bg-[#230f0f] overflow-y-auto">
         <div className="max-w-[1200px] mx-auto pb-20">
           {/* Breadcrumb */}
           <div className="flex flex-wrap items-center gap-2 p-6 pb-2">
