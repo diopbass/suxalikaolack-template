@@ -34,11 +34,11 @@ export default function AdminDashboard() {
             <span className="material-symbols-outlined">calendar_today</span>
             <span className="text-sm font-medium">Agenda</span>
           </Link>
-          <Link href="/admin/dashboard/programs" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <Link href="/admin/dashboard/programmes" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
             <span className="material-symbols-outlined">assignment</span>
             <span className="text-sm font-medium">Programmes</span>
           </Link>
-          <Link href="/admin/dashboard/opportunities" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <Link href="/admin/dashboard/opportunites" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
             <span className="material-symbols-outlined">lightbulb</span>
             <span className="text-sm font-medium">Opportunités</span>
           </Link>
