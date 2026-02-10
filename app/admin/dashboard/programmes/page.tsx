@@ -53,6 +53,10 @@ export default function ProgrammesPage() {
             <span className="material-symbols-outlined">group</span>
             <span className="text-sm font-medium">Utilisateurs</span>
           </Link>
+          <Link href="/admin/dashboard/citizens" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span className="material-symbols-outlined">contacts</span>
+            <span className="text-sm font-medium">Répertoire</span>
+          </Link>
           <Link href="/admin/dashboard/suggestions" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
             <div className="flex items-center justify-between w-full">
               <div className="flex items-center gap-3">

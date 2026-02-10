@@ -90,6 +90,10 @@ export default function AdminNewsPage() {
             <span className="material-symbols-outlined">group</span>
             <span className="text-sm font-medium">Utilisateurs</span>
           </Link>
+          <Link href="/admin/dashboard/citizens" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
+            <span className="material-symbols-outlined">contacts</span>
+            <span className="text-sm font-medium">Répertoire</span>
+          </Link>
           <Link href="/admin/dashboard/suggestions" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
             <span className="material-symbols-outlined">chat</span>
             <span className="text-sm font-medium">Suggestions</span>

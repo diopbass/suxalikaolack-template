@@ -108,6 +108,14 @@ export default function PartenairesPage() {
             <span className="material-symbols-outlined">group</span>
             <p className="text-sm font-medium">Utilisateurs</p>
           </Link>
+          <Link href="/admin/dashboard/citizens" className="flex items-center gap-3 px-4 py-3 rounded-lg text-[#a14545] hover:bg-[#f4e6e6] dark:hover:bg-[#3d1a1a] transition-colors">
+            <span className="material-symbols-outlined">contacts</span>
+            <p className="text-sm font-medium">Répertoire</p>
+          </Link>
+          <Link href="/admin/dashboard/suggestions" className="flex items-center gap-3 px-4 py-3 rounded-lg text-[#a14545] hover:bg-[#f4e6e6] dark:hover:bg-[#3d1a1a] transition-colors">
+            <span className="material-symbols-outlined">group</span>
+            <p className="text-sm font-medium">Utilisateurs</p>
+          </Link>
           <Link href="/admin/dashboard/suggestions" className="flex items-center gap-3 px-4 py-3 rounded-lg text-[#a14545] hover:bg-[#f4e6e6] dark:hover:bg-[#3d1a1a] transition-colors">
             <div className="flex items-center justify-between w-full">
               <div className="flex items-center gap-3">
