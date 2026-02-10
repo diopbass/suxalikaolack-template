@@ -70,11 +70,11 @@ export default function AdminNewsPage() {
             <span className="material-symbols-outlined">event</span>
             <span className="text-sm font-medium">Agenda</span>
           </Link>
-          <Link href="/admin/dashboard/programs" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
+          <Link href="/admin/dashboard/programmes" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
             <span className="material-symbols-outlined">assignment</span>
             <span className="text-sm font-medium">Programmes</span>
           </Link>
-          <Link href="/admin/dashboard/opportunities" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
+          <Link href="/admin/dashboard/opportunites" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
             <span className="material-symbols-outlined">lightbulb</span>
             <span className="text-sm font-medium">Opportunités</span>
           </Link>
@@ -89,6 +89,10 @@ export default function AdminNewsPage() {
           <Link href="/admin/dashboard/users" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
             <span className="material-symbols-outlined">group</span>
             <span className="text-sm font-medium">Utilisateurs</span>
+          </Link>
+          <Link href="/admin/dashboard/citizens" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
+            <span className="material-symbols-outlined">contacts</span>
+            <span className="text-sm font-medium">Répertoire</span>
           </Link>
           <Link href="/admin/dashboard/suggestions" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-background-light dark:hover:bg-[#3d2424] transition-colors">
             <span className="material-symbols-outlined">chat</span>
