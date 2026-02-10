@@ -1,9 +1,22 @@
 "use client"
 
 import { useSidebar } from '@/components/users/sidebar-context'
+import { usePathname } from 'next/navigation'
+import { USER_DATA } from '@/lib/users/constants'
+
+const PAGE_TITLES: Record<string, string> = {
+  '/users/dashboard/profil': 'Utilisateur',
+  '/users/dashboard/qr-code': 'Mon QR Code',
+  '/users/dashboard/opportunites': 'Mes Opportunités',
+  '/users/dashboard/dons': 'Mes Dons',
+  '/users/dashboard/suggestions': 'Mes Suggestions',
+  '/users/dashboard/parametres': 'Paramètres',
+}
 
 export function MobileHeader() {
   const { toggleSidebar } = useSidebar()
+  const pathname = usePathname()
+  const pageTitle = PAGE_TITLES[pathname] || 'SUXALI KAOLACK'
 
   return (
     <div className="lg:hidden flex items-center justify-between p-4 bg-white dark:bg-[#2d1616] border-b border-slate-200 dark:border-slate-800 sticky top-0 z-20">
@@ -16,9 +29,12 @@ export function MobileHeader() {
         >
           <span className="material-symbols-outlined">menu</span>
         </button>
-        <span className="font-bold text-lg">SUXALI KAOLACK</span>
+        <span className="font-bold text-lg text-slate-900 dark:text-white">{pageTitle}</span>
       </div>
-      <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl_sTzMPVMXsfJugF1OjnpUQfL47xU4HhVVgMDrNysS_s-o2-2drQd7lhXvYE6bt2NlRHJtGITnxKfZ99DruqYjnULNqxH52U2Ql_5RahSve-iIc-eUu9hIWAVGTjYSawtlimnsn6JGUDQEcnLN2ohEyzBrWzvuDOmYxFq6STKugNOSGr264tLTjwqaQtR0awMbMY8BlfwcvtKEtttUrAMJaawHcy7YyR9Wct5F-a5Lk88B8g10QhJeK9rRtpIXoWoGEDIXc2mqlb')"}} />
+      <div 
+        className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 border-2 border-slate-200 dark:border-slate-700" 
+        style={{backgroundImage: `url('${USER_DATA.avatarUrl}')`}} 
+      />
     </div>
   )
 }
