@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useSidebar } from './sidebar-context'
+import { USER_DATA } from '@/lib/users/constants'
 
 export function UserSidebar() {
   const pathname = usePathname()
@@ -40,14 +41,14 @@ export function UserSidebar() {
           {/* User Profile */}
           <div className="flex gap-4 items-center">
             <div
-              className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm"
+              className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border-2 border-slate-200 dark:border-slate-700"
               style={{
-                backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLzOcWEa8KD7kdwA_pg1_ZoE6dh0JvXK2OY67dokHlvU3RytIpRDKnjs2EWjwNv9JhI7JsihFRDnYuQVcpXRJWFFpVs3-Ij15TH8v1P8D8aVaa0FBH3hPH84ad4EYPtE7sZMlMvto6Qu6zp56ELJxHDMlAv3zTekbUGzaOqxfCOn7NnFuoAmAUVRKf2O6kMj6D-wXn7TJRUAyrRKKz2pKEVbIfQasxnJ6PZuvRV-Uk-xFgtAHLxWf7DyD6NHhg3quIZBBX9xNUm4Hz')"
+                backgroundImage: `url('${USER_DATA.avatarUrl}')`
               }}
             />
             <div className="flex flex-col">
-              <h1 className="text-[#1d0c0c] dark:text-white text-base font-bold leading-tight">Moussa Diop</h1>
-              <p className="text-[#a14545] text-sm font-medium">Espace Citoyen</p>
+              <h1 className="text-[#1d0c0c] dark:text-white text-base font-bold leading-tight">{USER_DATA.fullName}</h1>
+              <p className="text-[#a14545] text-sm font-medium">ID: {USER_DATA.CITIZEN_ID}</p>
             </div>
           </div>
           {/* Navigation */}
